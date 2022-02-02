@@ -17,7 +17,9 @@ local plugins = {
       "wbthomason/packer.nvim",
       event = "VimEnter",
    },
-
+ {
+    'williamboman/nvim-lsp-installer',
+},
    {
       "NvChad/nvim-base16.lua",
       after = "packer.nvim",
@@ -26,6 +28,13 @@ local plugins = {
       end,
    },
 
+    {
+      "jose-elias-alvarez/null-ls.nvim",
+      after = "nvim-lspconfig",
+      config = function()
+         require("custom.plugin_confs.null-ls").setup()
+      end,
+   },
    {
       "kyazdani42/nvim-web-devicons",
       after = "nvim-base16.lua",
