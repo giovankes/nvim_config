@@ -15,8 +15,12 @@ local sources = {
    b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 
    --javascript 
-   b.formatting.prettier.with{filetypes={"javascript", "javascriptreact"}, command={"prettier"}},
+   b.formatting.eslint.with{filetypes={"javascript", "javascriptreact"}},
    b.diagnostics.eslint
+
+   --php 
+   b.formatting.phpcbf,
+   b.diagnostics.php
 }
 
 local M = {}
