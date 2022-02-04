@@ -16,7 +16,7 @@ local sources = {
 
    --javascript 
    b.formatting.eslint.with{filetypes={"javascript", "javascriptreact"}},
-   b.diagnostics.eslint
+   b.diagnostics.eslint,
 
    --php 
    b.formatting.phpcbf,
