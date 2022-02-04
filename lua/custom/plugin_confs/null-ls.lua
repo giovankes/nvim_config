@@ -2,7 +2,6 @@ local null_ls = require "null-ls"
 local b = null_ls.builtins
 
 local sources = {
-
    b.formatting.prettierd.with { filetypes = { "html", "markdown", "css"} },
    b.formatting.deno_fmt,
 
@@ -15,8 +14,8 @@ local sources = {
    b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 
    --javascript 
-   b.formatting.eslint.with{filetypes={"javascript", "javascriptreact"}},
-   b.diagnostics.eslint,
+   b.formatting.prettier.with({filetypes= {"javascript", "json", "yaml"}}),
+   b.diagnostics.eslint.with({filetypes={"javascript", "json", "yaml"}}),
 
    --php 
    b.formatting.phpcbf,
