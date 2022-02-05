@@ -22,7 +22,7 @@ local sources = {
    b.diagnostics.php,
 
    --rust
-   b.formatting.rustfm.with({filetypes={"rust"}})
+   b.formatting.rustfmt.with({filetypes={"rust"}})
 }
 
 local M = {}
