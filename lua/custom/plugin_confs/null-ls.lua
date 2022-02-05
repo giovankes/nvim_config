@@ -19,7 +19,10 @@ local sources = {
 
    --php 
    b.formatting.phpcbf,
-   b.diagnostics.php
+   b.diagnostics.php,
+
+   --rust
+   b.formatting.rustfm.with({filetypes={"rust"}})
 }
 
 local M = {}
