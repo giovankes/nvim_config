@@ -14,8 +14,8 @@ local sources = {
    b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 
    --javascript 
-   b.formatting.prettier.with({filetypes= {"javascript", "json", "yaml"}}),
-   b.diagnostics.eslint.with({filetypes={"javascript", "json", "yaml"}}),
+   b.formatting.prettier.with({filetypes= {"javascript", "javascriptreact", "json", "yaml"}}),
+   b.diagnostics.eslint.with({filetypes={"javascript","javascriptreact", "json", "yaml"}}),
 
    --php 
    b.formatting.phpcbf,
