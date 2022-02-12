@@ -22,7 +22,10 @@ local sources = {
    b.diagnostics.php,
 
    --rust
-   b.formatting.rustfmt.with({filetypes={"rust"}})
+   b.formatting.rustfmt.with({filetypes={"rust"}}),
+
+   b.formatting.black.with({filetypes={"python"}}),
+   b.diagnostics.pylint.with({filetypes={"python"}})
 }
 
 local M = {}
