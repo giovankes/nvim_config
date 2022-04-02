@@ -20,14 +20,16 @@ local plugins = {
  {
     'williamboman/nvim-lsp-installer',
 },
-   {
+  {
       "NvChad/nvim-base16.lua",
       after = "packer.nvim",
       config = function()
          require("colors").init()
       end,
    },
-   {'vimwiki/vimwiki'},
+   {'vimwiki/vimwiki', 
+      config = override_req("vimwiki", "plugins.configs.vimwiki"),
+ },
     {
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",

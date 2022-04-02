@@ -2,12 +2,12 @@ local null_ls = require "null-ls"
 local b = null_ls.builtins
 
 local sources = {
-   b.formatting.prettierd.with { filetypes = { "html", "markdown", "css"} },
+   b.formatting.prettierd.with { filetypes = { "html", "css"} },
    b.formatting.deno_fmt,
 
    -- Lua
-   b.formatting.stylua,
-   b.diagnostics.luacheck.with { extra_args = { "--global vim" } },
+   b.formatting.stylua.with({filetypes={"lua"}}),
+   b.diagnostics.luacheck,
 
    -- Shell
    b.formatting.shfmt,
@@ -24,8 +24,13 @@ local sources = {
    --rust
    b.formatting.rustfmt.with({filetypes={"rust"}}),
 
+   --python
    b.formatting.black.with({filetypes={"python"}}),
-   b.diagnostics.pylint.with({filetypes={"python"}})
+   b.diagnostics.pylint.with({filetypes={"python"}}),
+
+   --markdown and text 
+   b.formatting.markdownlint.with({filetypes={"markdown"}}),
+   b.diagnostics.alex.with({filetypes={"markdown"}})
 }
 
 local M = {}
