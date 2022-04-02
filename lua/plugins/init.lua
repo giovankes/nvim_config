@@ -27,6 +27,7 @@ local plugins = {
          require("colors").init()
       end,
    },
+   {'vimwiki/vimwiki'},
     {
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
