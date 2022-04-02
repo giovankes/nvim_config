@@ -192,4 +192,8 @@ M.telescope = function()
    map("n", m.themes, ":Telescope themes <CR>")
 end
 
+M.vimwiki = function()
+  local m = plugin_maps.vimwiki 
+  map("n", m.wiki_html, ":VimwikiAll2HTML <CR>")
+end
 return M

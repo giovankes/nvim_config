@@ -29,6 +29,9 @@ local plugins = {
    },
    {'vimwiki/vimwiki', 
       config = override_req("vimwiki", "plugins.configs.vimwiki"),
+      setup = function()
+         require("core.mappings").vimwiki()
+      end,
  },
     {
       "folke/todo-comments.nvim",

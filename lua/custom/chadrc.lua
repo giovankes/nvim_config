@@ -228,6 +228,9 @@ M.mappings.plugins = {
       oldfiles = "<leader>fo",
       themes = "<leader>th", -- NvChad theme picker
    },
+   vimwiki = {
+    wiki_html="<leader>gw",
+   },
 }
 
 return M
