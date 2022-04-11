@@ -7,6 +7,8 @@ M.setup = function()
        main_image          = "file",
        log_level           = nil, 
        enable_line_number  = false,
+       debounce_timeout    = 10,
+       
      })
 end
 
