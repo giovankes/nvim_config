@@ -18,6 +18,12 @@ local plugins = {
     event = "VimEnter",
   },
   {
+    'kdheepak/lazygit.nvim',
+    setup = function()
+        require("core.mappings").lazygit()
+      end,
+  },
+  {
     'williamboman/nvim-lsp-installer',
   },
   {

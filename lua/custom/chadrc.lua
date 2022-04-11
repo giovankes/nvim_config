@@ -231,6 +231,9 @@ M.mappings.plugins = {
    vimwiki = {
     wiki_html="<leader>gw",
    },
+   lazygit={
+     lazy_git="<leader>gg",
+   },
 }
 
 return M

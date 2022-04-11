@@ -196,4 +196,10 @@ M.vimwiki = function()
   local m = plugin_maps.vimwiki 
   map("n", m.wiki_html, ":VimwikiAll2HTML <CR>")
 end
+
+M.lazygit = function()
+  local m = plugin_maps.lazygit 
+  map("n", m.lazy_git, ":LazyGit <CR>")
+end 
+
 return M
