@@ -18,6 +18,9 @@ local plugins = {
     event = "VimEnter",
   },
   {
+    'andweeb/presence.nvim'
+},
+  {
     'kdheepak/lazygit.nvim',
     setup = function()
         require("core.mappings").lazygit()
@@ -25,6 +28,9 @@ local plugins = {
   },
   {
     'williamboman/nvim-lsp-installer',
+    config = function()
+      require("custom.plugin_confs.discord").setup()
+    end
   },
   {
     "NvChad/nvim-base16.lua",
