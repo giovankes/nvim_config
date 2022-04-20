@@ -33,7 +33,11 @@ local sources = {
 
    --markdown and text 
    b.formatting.markdownlint.with({filetypes={"markdown"}}),
-   b.diagnostics.alex.with({filetypes={"markdown"}})
+   b.diagnostics.alex.with({filetypes={"markdown"}}),
+   
+   -- C++
+   b.formatting.clang_format.with({filetypes={"cpp", "cs"}}),
+   b.diagnostics.cppcheck.with({filetypes={"cpp", "c"}})
 }
 
 local M = {}
