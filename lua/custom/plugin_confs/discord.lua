@@ -6,9 +6,9 @@ M.setup = function()
       neovim_image_text   = "uwu",
        main_image          = "file",
        log_level           = nil, 
-       enable_line_number  = false,
+       enable_line_number  = true,
        debounce_timeout    = 10,
-       
+       buttons = false,
      })
 end
 
