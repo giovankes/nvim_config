@@ -8,7 +8,7 @@ M.setup = function()
        log_level           = nil, 
        enable_line_number  = true,
        debounce_timeout    = 10,
-       buttons = false,
+       buttons = true,
      })
 end
 
