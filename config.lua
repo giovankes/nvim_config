@@ -8,6 +8,10 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
+--shit
+vim.opt.number = true -- set numbered lines
+vim.opt.relativenumber = true -- set relative numbered lines
+
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
@@ -17,6 +21,7 @@ lvim.colorscheme = "onedarker"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
+
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
