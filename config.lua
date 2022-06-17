@@ -155,6 +155,19 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+   { "andweeb/presence.nvim",
+    config = function()
+      local presence = require "presence"
+      presence:setup({
+        neovim_image_text  = "uwu",
+        main_image         = "file",
+        log_level          = nil,
+        enable_line_number = true,
+        debounce_timeout   = 10,
+        buttons            = false
+      })
+    end
+  }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
