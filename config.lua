@@ -8,20 +8,18 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
---shit
-vim.opt.number = true -- set numbered lines
-vim.opt.relativenumber = true -- set relative numbered lines
-
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "deus"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
+-- shit
+vim.opt.number = true
+vim.opt.relativenumber = true
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
-
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
@@ -114,7 +112,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
 -- end
 
--- -- set a formatter, this will override the language server formatting capabilities (if it exists)
+-- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black", filetypes = { "python" } },
@@ -126,7 +124,7 @@ formatters.setup {
     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     extra_args = { "--print-with", "100" },
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "typescript", "typescriptreact", "javascript" },
+    filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
   },
 }
 
@@ -151,11 +149,14 @@ formatters.setup {
 -- Additional Plugins
 lvim.plugins = {
   { "folke/tokyonight.nvim" },
+  { "lunarvim/colorschemes" },
+  { "daschw/leaf.nvim" },
+  { "ajmwagar/vim-deus" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-   { "andweeb/presence.nvim",
+  { "andweeb/presence.nvim",
     config = function()
       local presence = require "presence"
       presence:setup({
@@ -169,6 +170,8 @@ lvim.plugins = {
     end
   }
 }
+
+
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- vim.api.nvim_create_autocmd("BufEnter", {
